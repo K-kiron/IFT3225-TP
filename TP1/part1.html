@@ -7,8 +7,8 @@
 </head>
 <body>
     <header>
-        <h1>Al Pacino</h1>
-        <img id="header" src="" alt="Al Pacino">
+        <h1 id="header">Al Pacino</h1>
+        <img src="img/alpacino.webp" alt="Al Pacino">
         <p></p>
     </header>
     <article>
@@ -43,7 +43,7 @@
 	            var h = dd.getHours();
 	            var mi = dd.getMinutes();
 	            var s = dd.getSeconds();
-	            var str = y + "/" + m + "/" + d + "&nbsp;&nbsp;" + h + ":" + mi + ":" + s + "&nbsp;&nbsp;";
+	            var str = "Update on "+ y + "/" + m + "/" + d + "&nbsp;&nbsp;" + h + ":" + mi + ":" + s;
 	            document.getElementById("sp_time").innerHTML = str;
             },1000);
         </script>
