@@ -1,24 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>TP1</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>TP1</h1>
-        </div>
-        <div class="content">
-            <div class="content-left">
-                <h2>Menu</h2>
-            </div>
-
-            <div class="content-right">
-                <h2>Content</h2>
-            </div>    
-        </div>        
+    <header>
+        <h1>Al Pacino</h1>
+        <img id="header" src="" alt="Al Pacino">
+        <p></p>
+    </header>
+    <article>
+        <h2></h2>
+        <p></p>
+    </article>
+    <article>
+        <h2></h2>
+        <p></p>
+    </article>
+    <article>
+        <h2></h2>
+        <p></p>
+    </article>
+    <article>
+        <h2></h2>
+        <p></p>
+    </article>
+    <article>
+        <h2></h2>
+        <p></p>
+    </article>
+    <footer>
+        <a href="#header">Vers le haut</a>
+        <span id="sp_time"></span>
+        <script type="text/javascript">
+            setInterval(function(){
+	            var dd = new Date();
+            	var y = dd.getFullYear();
+	            var m = dd.getMonth() + 1;
+	            var d = dd.getDate();
+	            var h = dd.getHours();
+	            var mi = dd.getMinutes();
+	            var s = dd.getSeconds();
+	            var str = y + "/" + m + "/" + d + "&nbsp;&nbsp;" + h + ":" + mi + ":" + s + "&nbsp;&nbsp;";
+	            document.getElementById("sp_time").innerHTML = str;
+            },1000);
+        </script>
+    </footer>
 
 </body>
 </html>
