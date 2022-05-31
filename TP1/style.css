@@ -28,7 +28,7 @@ h2{font: 400 18px/22px 'Bree Serif', Georgia, serif;
 .top-divider{margin-bottom:40px;}
 .bottom-divider{margin-top:40px;}
 
-.header{
+.header, .formation, .competence, .experience, .lague, .interet, footer{
     margin:0px 43px; 
     padding-top:115px;
     float: auto;
