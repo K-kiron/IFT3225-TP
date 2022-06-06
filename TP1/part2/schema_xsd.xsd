@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:group name="auteur_prenomEtNom">
+        <xs:all>
+            <xs:element name="prenom">
+                
+            </xs:element>
+            <xs:element name="nom">
+                
+            </xs:element>
+        </xs:all>
+    </xs:group>
+    <xs:group name="auteur_autresInfo">
+        <xs:sequence>
+            <xs:element name="pays" type="xs:string"/>
+            <xs:element name="commentaire" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="photo">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value=""/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            
+        </xs:sequence>
+    </xs:group>
+    
+    <xs:element name="bibliotheque">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="livres">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="livre" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="titre">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="60"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="annee" type="xs:integer"/>
+                                        <xs:element name="prix">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="0"/>
+                                                    <xs:maxInclusive value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="auteurs">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="auteur" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    
+                                    <xs:group ref="auteur_prenomEtNom"/>
+                                    
+                                    
+                                    
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
