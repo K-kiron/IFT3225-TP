@@ -18,6 +18,8 @@
             <photo></photo>
         </auteur>
         <auteur auteurID="b">
+            <nom></nom>
+            <prenom></prenom>
             <pays></pays>
             <photo></photo>
         </auteur>

@@ -1,30 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-    <xs:group name="auteur_prenomEtNom">
-        <xs:all>
-            <xs:element name="prenom">
-                
-            </xs:element>
-            <xs:element name="nom">
-                
-            </xs:element>
-        </xs:all>
-    </xs:group>
-    <xs:group name="auteur_autresInfo">
-        <xs:sequence>
-            <xs:element name="pays" type="xs:string"/>
-            <xs:element name="commentaire" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="photo">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value=""/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            
-        </xs:sequence>
-    </xs:group>
-    
+    <xs:simpleType name="intervalle_prix">  
+        <xs:restriction base="xs:integer">  
+            <xs:minInclusive value="0"/>  
+            <xs:maxInclusive value="100"/>  
+        </xs:restriction>  
+    </xs:simpleType>
     <xs:element name="bibliotheque">
         <xs:complexType>
             <xs:all>
@@ -37,41 +18,87 @@
                                         <xs:element name="titre">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:string">
-                                                    <xs:maxLength value="60"/>
+                                                  <xs:maxLength value="60"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
-                                        <xs:element name="annee" type="xs:integer"/>
+                                        
+                                        <xs:element name="annee" type="xs:gYear"/>
+                                        
                                         <xs:element name="prix">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="intervalle_prix">
+                                                        <xs:attribute name="devise" use="optional">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:string">
+                                                                    <xs:enumeration value="CAD"/>
+                                                                    <xs:enumeration value="USD"/>
+                                                                    <xs:enumeration value="EURO"/>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        
+                                        <xs:choice>
+                                            <xs:element name="couverture">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:pattern value=""/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:element>
+                                        </xs:choice>
+                                        
+                                        <xs:choice>
+                                            <xs:element name="commentaire" type="xs:string"/>
+                                        </xs:choice>
+                                    </xs:sequence>
+                                    
+                                    <xs:attribute name="langue" type="xs:string" use="required"/>
+                                    <xs:attribute name="auteurs" type="xs:IDREFS" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="auteurs">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="auteur" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:choice>
+                                            <xs:sequence>
+                                                <xs:element name="nom" type="xs:string"/>
+                                                <xs:element name="prenom" type="xs:string"/>
+                                            </xs:sequence>
+                                            <xs:sequence>
+                                                <xs:element name="prenom" type="xs:string"/>
+                                                <xs:element name="nom" type="xs:string"/>
+                                            </xs:sequence>
+                                        </xs:choice>
+                                        <xs:element name="pays" type="xs:string"/>
+                                        <xs:element name="commentaire" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="photo">
                                             <xs:simpleType>
-                                                <xs:restriction base="xs:integer">
-                                                    <xs:minInclusive value="0"/>
-                                                    <xs:maxInclusive value="100"/>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value=""/>
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
                                     </xs:sequence>
+                                    <xs:attribute name="ident" type="xs:ID" use="required"/>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
                 
-                <xs:element name="auteurs">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="auteur" minOccurs="0" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    
-                                    <xs:group ref="auteur_prenomEtNom"/>
-                                    
-                                    
-                                    
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
             </xs:all>
         </xs:complexType>
     </xs:element>
