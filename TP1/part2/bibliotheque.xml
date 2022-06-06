@@ -1,34 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<bibiotheque>
-    <livre langue="" auteurs="">
-        <titre>
-            
-        </titre>
-        <annee>
-            
-        </annee>
-        <prix devise="">
-            
-        </prix>
-        
-    </livre>
-    <auteur ident="">
-        <nom>
-            
-        </nom>
-        <prenom>
-            
-        </prenom>
-        <pays>
-            
-        </pays>
-        <commentaire>
-            
-        </commentaire>
-        <photo>
-            
-        </photo>
-        
-    </auteur>
-</bibiotheque>
+<!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
+<bibliotheque>
+    <livres>
+        <livre langue="anglais" auteurs="a b">
+            <titre></titre>
+            <annee></annee>
+            <prix></prix>
+        </livre>
+    </livres>
+    
+    <auteurs>
+        <auteur auteurID="a">
+            <nom></nom>
+            <prenom></prenom>
+            <pays></pays>
+            <commentaire></commentaire>
+            <photo></photo>
+        </auteur>
+        <auteur auteurID="b">
+            <pays></pays>
+            <photo></photo>
+        </auteur>
+    </auteurs>
+</bibliotheque>
