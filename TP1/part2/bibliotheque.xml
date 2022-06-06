@@ -2,23 +2,72 @@
 <!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
 <bibliotheque>
     <livres>
-        <livre langue="anglais" auteurs="a b">
-            <titre></titre>
-            <annee></annee>
-            <prix></prix>
+        <livre langue="EN" auteurs="a">
+            <titre>THE GREAT GATSBY</titre>
+            <annee>2014</annee>
+            <prix>32</prix>
+        </livre>
+        <livre langue="FR" auteurs="d">
+            <titre>LOLITA</titre>
+            <annee>1991</annee>
+            <prix>29</prix>
+        </livre>
+        <livre langue="EN" auteurs="b">
+            <titre>BRAVE NEW WORLD</titre>
+            <annee>1993</annee>
+            <prix>28</prix>
+        </livre>
+        <livre langue="EN" auteurs="c">
+            <titre>THE SOUND AND THE FURY</titre>
+            <annee>1929</annee>
+            <prix>33</prix>
+        </livre>
+        <livre langue="FR" auteurs="e">
+            <titre>CATCH-22</titre>
+            <annee>1987</annee>
+            <prix>23</prix>
         </livre>
     </livres>
     
     <auteurs>
         <auteur auteurID="a">
-            <nom></nom>
-            <prenom></prenom>
-            <pays></pays>
+            <nom>Fitzgerald</nom>
+            <prenom>F. Scott</prenom>
+            <pays>USA</pays>
             <commentaire></commentaire>
             <photo></photo>
         </auteur>
         <auteur auteurID="b">
-            <pays></pays>
+            <nom>Huxley</nom>
+            <prenom>Aldous</prenom>
+            <pays>UK</pays>
+            <commentaire></commentaire>
+            <photo></photo>
+        </auteur>
+        <auteur auteurID="c">
+            <nom>Faulkner</nom>
+            <prenom>William Cuthbert</prenom>
+            <pays>USA</pays>
+            <commentaire>
+                Un romancier et nouvelliste américain. 
+                Publié à partir des années 1920, 
+                il reçoit le prix Nobel de littérature en 1949, 
+                alors qu'il est encore relativement peu connu.
+            </commentaire>
+            <photo></photo>
+        </auteur>
+        <auteur auteurID="d">
+            <nom>Nabokov</nom>
+            <prenom>Vladimir Vladimirovich</prenom>
+            <pays>Russie</pays>
+            <commentaire></commentaire>
+            <photo></photo>
+        </auteur>
+        <auteur auteurID="e">
+            <nom>Heller</nom>
+            <prenom>Joseph</prenom>
+            <pays>USA</pays>
+            <commentaire></commentaire>
             <photo></photo>
         </auteur>
     </auteurs>
