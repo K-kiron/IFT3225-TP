@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema_rnc.rnc" type="application/relax-ng-compact-syntax"?>
+<!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
+<bibliotheque>
+    <livres>
+        <livre langue="anglais" auteurs="a b">
+            <titre></titre>
+            <annee></annee>
+            <prix></prix>
+        </livre>
+    </livres>
+    
+    <auteurs>
+        <auteur auteurID="a">
+            <nom></nom>
+            <prenom></prenom>
+            <pays></pays>
+            <commentaire></commentaire>
+            <photo></photo>
+        </auteur>
+        <auteur auteurID="b">
+            <nom></nom>
+            <prenom></prenom>
+            <pays></pays>
+            <photo></photo>
+        </auteur>
+    </auteurs>
+</bibliotheque>
