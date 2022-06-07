@@ -1,3 +1,50 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
-element test { xsd:double }
+start = element bibliotheque {
+            livres, auteurs
+            }
+            
+livres = element livres {
+            livre+
+            }
+            
+livre = element livre {
+            attribute langue {text},
+            attribute auteurs {xsd:IDREFS},
+            (titre, annee, prix),
+            commentaire?, couverture?
+        }
+
+auteurs = element auteurs {
+            auteur+
+}
+
+auteur = element auteur {
+            ((nom & prenom), pays, commentaire?, photo),
+            attribute ident {xsd:ID}
+        }
+
+
+titre = element titre {text}
+
+annee = element annee {xsd:gYear}
+
+prix = element prix {
+            attribute devise {xsd:nonNegativeInteger} 
+        }
+        
+commentaire = element commentaire {text}
+
+couverture = element couverture {
+text
+        }
+        
+nom = element nom {text}
+
+prenom = element prenom {text}
+
+pays = element pays {text}
+
+photo = element photo {text}
+
+        

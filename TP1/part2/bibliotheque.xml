@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema_rnc.rnc" type="application/relax-ng-compact-syntax"?>
 <!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
 <bibliotheque>
     <livres>
