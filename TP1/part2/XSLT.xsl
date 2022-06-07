@@ -23,8 +23,8 @@
     <xsl:template match="bibliotheque">
         <h1>Bibliotheque</h1>
         
-        <table>
-            <tr>
+        <table border="1">
+            <tr style="background: #9acd32">
                 <th>Titre</th>
                 <th>Annee</th>
                 <th>Prix</th>
@@ -32,8 +32,8 @@
             <xsl:apply-templates select="livres"/>
         </table>
         
-        <table>
-            <tr>
+        <table border="1">
+            <tr style="background: #9acd32">
                 <th>Nom</th>
                 <th>Prenom</th>
                 <th>Pays</th>

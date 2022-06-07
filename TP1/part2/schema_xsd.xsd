@@ -42,20 +42,16 @@
                                                 </xs:simpleContent>
                                             </xs:complexType>
                                         </xs:element>
-                                        
-                                        <xs:choice>
-                                            <xs:element name="couverture">
-                                                <xs:simpleType>
-                                                    <xs:restriction base="xs:string">
-                                                        <xs:pattern value=""/>
-                                                    </xs:restriction>
-                                                </xs:simpleType>
-                                            </xs:element>
-                                        </xs:choice>
-                                        
-                                        <xs:choice>
-                                            <xs:element name="commentaire" type="xs:string"/>
-                                        </xs:choice>
+                                       
+                                        <xs:element name="couverture" minOccurs="0" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="(http(s)?:\/\/).*"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                       
+                                        <xs:element name="commentaire" type="xs:string" minOccurs="0" maxOccurs="1"/>
                                     </xs:sequence>
                                     
                                     <xs:attribute name="langue" type="xs:string" use="required"/>
@@ -87,7 +83,7 @@
                                         <xs:element name="photo">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:string">
-                                                    <xs:pattern value=""/>
+                                                    <xs:pattern value="(http(s)?:\/\/).*"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>

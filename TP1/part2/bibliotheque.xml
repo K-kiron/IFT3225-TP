@@ -1,50 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="XSLT.xsl"?>
+<!--<?xml-model href="schema_rnc.rnc" type="application/relax-ng-compact-syntax"?>-->
 <!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
-<bibliotheque>
+
+<!--document XML bibliotheque-->
+<bibliotheque xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="schema_xsd.xsd">
     <livres>
         <livre langue="EN" auteurs="a">
             <titre>THE GREAT GATSBY</titre>
             <annee>2014</annee>
-            <prix>32</prix>
+            <prix devise="CAD">32</prix>
         </livre>
         <livre langue="FR" auteurs="d">
             <titre>LOLITA</titre>
             <annee>1991</annee>
-            <prix>29</prix>
+            <prix devise="CAD">29</prix>
         </livre>
         <livre langue="EN" auteurs="b">
             <titre>BRAVE NEW WORLD</titre>
             <annee>1993</annee>
-            <prix>28</prix>
+            <prix devise="CAD">28</prix>
         </livre>
         <livre langue="EN" auteurs="c">
             <titre>THE SOUND AND THE FURY</titre>
             <annee>1929</annee>
-            <prix>33</prix>
+            <prix devise="CAD">33</prix>
         </livre>
         <livre langue="FR" auteurs="e">
             <titre>CATCH-22</titre>
             <annee>1987</annee>
-            <prix>23</prix>
+            <prix devise="CAD">23</prix>
         </livre>
     </livres>
     
     <auteurs>
-        <auteur auteurID="a">
+        <auteur ident="a">
             <nom>Fitzgerald</nom>
             <prenom>F. Scott</prenom>
             <pays>USA</pays>
-            <commentaire></commentaire>
-            <photo></photo>
+            <commentaire/>
+            <photo>https://m.media-amazon.com/images/M/MV5BOTM3ZGJiYzgtMmYwMi00NzU1LWJkNmItYWE5ZDhiMjJmN2RhXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_UY1200_CR74,0,630,1200_AL_.jpg</photo>
         </auteur>
-        <auteur auteurID="b">
+        <auteur ident="b">
             <nom>Huxley</nom>
             <prenom>Aldous</prenom>
             <pays>UK</pays>
-            <commentaire></commentaire>
-            <photo></photo>
+            <commentaire/>
+            <photo>https://www.biography.com/.image/t_share/MTgyMDgyNTMzMDc5MzkzNjA4/gettyimages-517398572sq.jpg</photo>
         </auteur>
-        <auteur auteurID="c">
+        <auteur ident="c">
             <nom>Faulkner</nom>
             <prenom>William Cuthbert</prenom>
             <pays>USA</pays>
@@ -54,21 +59,21 @@
                 il reçoit le prix Nobel de littérature en 1949, 
                 alors qu'il est encore relativement peu connu.
             </commentaire>
-            <photo></photo>
+            <photo>https://images.gr-assets.com/authors/1615562983p8/3535.jpg</photo>
         </auteur>
-        <auteur auteurID="d">
+        <auteur ident="d">
             <nom>Nabokov</nom>
             <prenom>Vladimir Vladimirovich</prenom>
             <pays>Russie</pays>
-            <commentaire></commentaire>
-            <photo></photo>
+            <commentaire/>
+            <photo>https://images.gr-assets.com/authors/1651442178p8/5152.jpg</photo>
         </auteur>
-        <auteur auteurID="e">
+        <auteur ident="e">
             <nom>Heller</nom>
             <prenom>Joseph</prenom>
             <pays>USA</pays>
-            <commentaire></commentaire>
-            <photo></photo>
+            <commentaire/>
+            <photo>http://wordpress.wbur.org/wp-content/uploads/2013/07/0722_joseph-heller.jpg</photo>
         </auteur>
     </auteurs>
 </bibliotheque>

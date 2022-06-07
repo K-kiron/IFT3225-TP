@@ -30,7 +30,8 @@ titre = element titre {text}
 annee = element annee {xsd:gYear}
 
 prix = element prix {
-            attribute devise {xsd:nonNegativeInteger} 
+            xsd:nonNegativeInteger,
+            attribute devise {text} 
         }
         
 commentaire = element commentaire {text}
