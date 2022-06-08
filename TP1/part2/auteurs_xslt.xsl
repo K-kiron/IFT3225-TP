@@ -10,6 +10,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
         indent="yes" encoding="UTF-8"/>
     
+    <xsl:param name="param1" select="/bibliotheque/auteurs/auteur[nom='Huxley']"/>
+    
     <xsl:template match="/bibliotheque">
         <html>
             <head>
@@ -25,7 +27,7 @@
                         <th>Photo</th>
                     </tr>
                     
-                    <xsl:for-each select="auteurs/auteur">
+                    <xsl:for-each select="$param1">
                         <tr>
                             <td><xsl:value-of select="nom"/></td>
                             <td><xsl:value-of select="prenom"/></td>

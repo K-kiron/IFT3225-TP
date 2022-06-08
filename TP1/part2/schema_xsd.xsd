@@ -94,7 +94,6 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                
             </xs:all>
         </xs:complexType>
     </xs:element>

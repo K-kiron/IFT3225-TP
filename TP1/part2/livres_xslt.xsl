@@ -10,6 +10,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
         indent="yes" encoding="UTF-8"/>
     
+    <xsl:param name="param1" select="//livre[33>prix and prix>28]"/>
+    
     <xsl:template match="/bibliotheque">
         <html>
             <head>
@@ -23,7 +25,7 @@
                         <th>Prix</th>
                     </tr>
                     
-                    <xsl:for-each select="livres/livre">
+                    <xsl:for-each select="$param1">
                         <tr>
                             <td><xsl:value-of select="titre"/></td>
                             <td><xsl:value-of select="annee"/></td>
