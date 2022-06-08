@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="XSLT.xsl"?>
+<?xml-stylesheet type="text/xsl" href="auteurs_xslt.xsl"?>
+<?xml-stylesheet type="text/xsl" href="livres_xslt.xsl"?>
 <!--<?xml-model href="schema_rnc.rnc" type="application/relax-ng-compact-syntax"?>-->
 <!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
 

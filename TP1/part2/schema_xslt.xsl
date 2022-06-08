@@ -22,7 +22,9 @@
     
     <xsl:template match="bibliotheque">
         <h1>Bibliotheque</h1>
+        <br/>
         
+        <h3>Tableau de livres</h3>
         <table border="1">
             <tr style="background: #9acd32">
                 <th>Titre</th>
@@ -31,7 +33,9 @@
             </tr>
             <xsl:apply-templates select="livres"/>
         </table>
+        <br/>
         
+        <h3>Tableau de auteurs</h3>
         <table border="1">
             <tr style="background: #9acd32">
                 <th>Nom</th>
@@ -42,7 +46,6 @@
             </tr>
             <xsl:apply-templates select="auteurs"/>
         </table>
-        
     </xsl:template>
     
     <xsl:template match="livres">
@@ -110,7 +113,11 @@
     </xsl:template>
     <xsl:template match="photo">
         <td>
-            <xsl:value-of select="text()"/>
+            <img height="100" width="100">
+                <xsl:attribute name="src">
+                    <xsl:value-of select="text()"/>
+                </xsl:attribute>
+            </img>
         </td>
     </xsl:template>
     
