@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT bibliotheque (livres, auteurs) >
+<!ELEMENT livres (livre+) >
+<!ELEMENT auteurs (auteur+) >
+<!ELEMENT livre (titre, annee, prix, couverture?, commentaire?) >
+<!ELEMENT auteur (((nom,prenom)|(prenom,nom)), pays, commentaire?, photo) >
+<!ELEMENT titre (#PCDATA) >
+<!ELEMENT annee (#PCDATA) >
+<!ELEMENT couverture (#PCDATA) >
+<!ELEMENT commentaire (#PCDATA) >
+<!ELEMENT nom (#PCDATA) >
+<!ELEMENT prenom (#PCDATA) >
+<!ELEMENT pays (#PCDATA) >
+<!ELEMENT photo (#PCDATA) >
+<!ATTLIST livre langue CDATA #REQUIRED >
+<!ATTLIST livre auteurs IDREFS #REQUIRED >
+<!ATTLIST auteur auteurID ID #REQUIRED >
+<!ATTLIST prix devise (CAD|USD|EURO) "CAD">
+
+<!--Nous n'avons pas spécifié le type de contenu de l'attribut "prix", parce qu'il est de type
+numérique mais il n'est pas en mesure de spécifier ce type avec DTD.-->
