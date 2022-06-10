@@ -2,8 +2,8 @@
 
 <!--Wenhao XU_20150702, Yuyang XIONG_20151236-->
 
-<!--<?xml-stylesheet type="text/xsl" href="auteurs_xslt.xsl"?>-->
-<?xml-stylesheet type="text/xsl" href="livres_xslt.xsl"?>
+<?xml-stylesheet type="text/xsl" href="auteurs_xslt.xsl"?>
+<!--<?xml-stylesheet type="text/xsl" href="livres_xslt.xsl"?>-->
 <!--<?xml-model href="schema_rnc.rnc" type="application/relax-ng-compact-syntax"?>-->
 <!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
 
@@ -14,7 +14,7 @@
         <livre langue="EN" auteurs="a">
             <titre>THE GREAT GATSBY</titre>
             <annee>2014</annee>
-            <prix devise="CAD">32</prix>
+            <prix devise="CAD">58</prix>
             <commentaire> I thought that the book was all right. 
                 The story was bland for my liking but I did like 
                 the social commentary that the book provided, 
@@ -29,13 +29,13 @@
         <livre langue="FR" auteurs="d">
             <titre>LOLITA</titre>
             <annee>1991</annee>
-            <prix devise="USD">29</prix>
+            <prix devise="USD">45</prix>
             <couverture>https://m.media-amazon.com/images/M/MV5BOGNkZDU0YjktN2Q5Zi00MmY0LWI3Y2YtNmQzOGQxY2UzNGM3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg</couverture>
         </livre>
         <livre langue="EN" auteurs="b">
             <titre>BRAVE NEW WORLD</titre>
             <annee>1993</annee>
-            <prix devise="EURO">28</prix>
+            <prix devise="EURO">34</prix>
             <commentaire>“Actual happiness always looks pretty squalid in 
                 comparison with the overcompensations for misery. And, of 
                 course, stability isn’t nearly so spectacular as instability. 
@@ -64,11 +64,34 @@
     </livres>
     
     <auteurs>
+        <auteur ident="c">
+            <nom>Faulkner</nom>
+            <prenom>William Cuthbert</prenom>
+            <pays>USA</pays>
+            <commentaire>
+                Un romancier et nouvelliste américain. 
+                Publié à partir des années 1920, 
+                il reçoit le prix Nobel de littérature en 1949, 
+                alors qu'il est encore relativement peu connu.
+            </commentaire>
+            <photo>https://images.gr-assets.com/authors/1615562983p8/3535.jpg</photo>
+        </auteur>
         <auteur ident="a">
             <nom>Fitzgerald</nom>
             <prenom>F. Scott</prenom>
             <pays>USA</pays>
             <photo>https://m.media-amazon.com/images/M/MV5BOTM3ZGJiYzgtMmYwMi00NzU1LWJkNmItYWE5ZDhiMjJmN2RhXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_UY1200_CR74,0,630,1200_AL_.jpg</photo>
+        </auteur>
+        <auteur ident="e">
+            <nom>Heller</nom>
+            <prenom>Joseph</prenom>
+            <pays>USA</pays>
+            <commentaire>né à Brooklyn le 1er mai 1923 et mort à East Hampton 
+                le 12 décembre 1999, est un auteur américain mondialement connu 
+                pour ses écrits satiriques concernant la Seconde Guerre mondiale, 
+                notamment Catch 22.
+            </commentaire>
+            <photo>http://wordpress.wbur.org/wp-content/uploads/2013/07/0722_joseph-heller.jpg</photo>
         </auteur>
         <auteur ident="b">
             <nom>Huxley</nom>
@@ -88,34 +111,11 @@
             </commentaire>
             <photo>https://www.biography.com/.image/t_share/MTgyMDgyNTMzMDc5MzkzNjA4/gettyimages-517398572sq.jpg</photo>
         </auteur>
-        <auteur ident="c">
-            <nom>Faulkner</nom>
-            <prenom>William Cuthbert</prenom>
-            <pays>USA</pays>
-            <commentaire>
-                Un romancier et nouvelliste américain. 
-                Publié à partir des années 1920, 
-                il reçoit le prix Nobel de littérature en 1949, 
-                alors qu'il est encore relativement peu connu.
-            </commentaire>
-            <photo>https://images.gr-assets.com/authors/1615562983p8/3535.jpg</photo>
-        </auteur>
         <auteur ident="d">
             <nom>Nabokov</nom>
             <prenom>Vladimir Vladimirovich</prenom>
             <pays>Russie</pays>
             <photo>https://images.gr-assets.com/authors/1651442178p8/5152.jpg</photo>
-        </auteur>
-        <auteur ident="e">
-            <nom>Heller</nom>
-            <prenom>Joseph</prenom>
-            <pays>USA</pays>
-            <commentaire>né à Brooklyn le 1er mai 1923 et mort à East Hampton 
-                le 12 décembre 1999, est un auteur américain mondialement connu 
-                pour ses écrits satiriques concernant la Seconde Guerre mondiale, 
-                notamment Catch 22.
-            </commentaire>
-            <photo>http://wordpress.wbur.org/wp-content/uploads/2013/07/0722_joseph-heller.jpg</photo>
         </auteur>
     </auteurs>
 </bibliotheque>

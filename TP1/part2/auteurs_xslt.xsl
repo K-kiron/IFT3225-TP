@@ -32,8 +32,8 @@
                     </tr>
                     
                     <xsl:for-each select="//auteur">
-                        <xsl:variable name="id" select="@ident"/>
                         <xsl:sort order="descending" select="//livre/prix"/>
+                        <xsl:variable name="id" select="@ident"/>
 <!--                        <xsl:if test="nom=$nomAuteur">-->
                             <tr>
                                 <td><xsl:value-of select="nom"/></td>
