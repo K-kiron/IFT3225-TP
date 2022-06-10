@@ -47,7 +47,18 @@
             <nom>Huxley</nom>
             <prenom>Aldous</prenom>
             <pays>UK</pays>
-            <commentaire/>
+            <commentaire>Un écrivain, romancier et philosophe britannique, 
+                membre de la famille Huxley. Il est diplômé du Balliol 
+                College de l'université d'Oxford avec une mention très 
+                bien en littérature anglaise.
+                
+                Auteur de près de cinquante ouvrages, il est surtout connu 
+                pour ses romans, dont Le Meilleur des mondes, roman 
+                d’anticipation dystopique, pour des ouvrages non romanesques, 
+                comme Les Portes de la perception, qui retrace les expériences 
+                vécues lors de la prise de drogue psychédélique, et pour un 
+                large éventail d'essais.
+            </commentaire>
             <photo>https://www.biography.com/.image/t_share/MTgyMDgyNTMzMDc5MzkzNjA4/gettyimages-517398572sq.jpg</photo>
         </auteur>
         <auteur ident="c">
@@ -73,7 +84,11 @@
             <nom>Heller</nom>
             <prenom>Joseph</prenom>
             <pays>USA</pays>
-            <commentaire/>
+            <commentaire>né à Brooklyn le 1er mai 1923 et mort à East Hampton 
+                le 12 décembre 1999, est un auteur américain mondialement connu 
+                pour ses écrits satiriques concernant la Seconde Guerre mondiale, 
+                notamment Catch 22.
+            </commentaire>
             <photo>http://wordpress.wbur.org/wp-content/uploads/2013/07/0722_joseph-heller.jpg</photo>
         </auteur>
     </auteurs>
