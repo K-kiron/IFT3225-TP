@@ -2,8 +2,8 @@
 
 <!--Wenhao XU_20150702, Yuyang XIONG_20151236-->
 
-<?xml-stylesheet type="text/xsl" href="auteurs_xslt.xsl"?>
-<!--<?xml-stylesheet type="text/xsl" href="livres_xslt.xsl"?>-->
+<!--<?xml-stylesheet type="text/xsl" href="auteurs_xslt.xsl"?>-->
+<?xml-stylesheet type="text/xsl" href="livres_xslt.xsl"?>
 <!--<?xml-model href="schema_rnc.rnc" type="application/relax-ng-compact-syntax"?>-->
 <!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
 
@@ -14,7 +14,7 @@
         <livre langue="EN" auteurs="a">
             <titre>THE GREAT GATSBY</titre>
             <annee>2014</annee>
-            <prix devise="CAD">58</prix>
+            <prix devise="CAD">32</prix>
             <commentaire> I thought that the book was all right. 
                 The story was bland for my liking but I did like 
                 the social commentary that the book provided, 
@@ -29,13 +29,13 @@
         <livre langue="FR" auteurs="d">
             <titre>LOLITA</titre>
             <annee>1991</annee>
-            <prix devise="USD">45</prix>
+            <prix devise="USD">29</prix>
             <couverture>https://m.media-amazon.com/images/M/MV5BOGNkZDU0YjktN2Q5Zi00MmY0LWI3Y2YtNmQzOGQxY2UzNGM3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg</couverture>
         </livre>
         <livre langue="EN" auteurs="b">
             <titre>BRAVE NEW WORLD</titre>
             <annee>1993</annee>
-            <prix devise="EURO">34</prix>
+            <prix devise="EURO">28</prix>
             <commentaire>“Actual happiness always looks pretty squalid in 
                 comparison with the overcompensations for misery. And, of 
                 course, stability isn’t nearly so spectacular as instability. 
@@ -52,7 +52,7 @@
         <livre langue="EN" auteurs="c">
             <titre>THE SOUND AND THE FURY</titre>
             <annee>1929</annee>
-            <prix devise="CAD">33</prix>
+            <prix devise="CAD">25</prix>
             <couverture>https://m.media-amazon.com/images/M/MV5BMjE3Nzc1NTg5OF5BMl5BanBnXkFtZTgwNDMwMzk4MjE@._V1_.jpg</couverture>
         </livre>
         <livre langue="FR" auteurs="e">
