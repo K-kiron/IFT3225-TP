@@ -14,7 +14,8 @@
         indent="yes" encoding="UTF-8"/>
     
     <xsl:param name="intervallePrix" select="//livre[34>prix and prix>22]"/>
-    <xsl:param name="motCle" select="//livre[contains(titre,'GATSBY')]"/>
+    <xsl:param name="motCle" select="''"/>
+    <xsl:param name="whitespace" select="' '"/>
     
     <xsl:template match="/bibliotheque">
         <html>
@@ -25,20 +26,36 @@
                 <table border="1">
                     <tr bgcolor="pink">
                         <th>Titre</th>
+                        <th>Auteur</th>
                         <th>Annee</th>
                         <th>Prix</th>
-                        <th>Auteur</th>
+                        <th>Couverture</th>
+                        <th>Commentaire</th>
                     </tr>
                     
                     <xsl:for-each select="$intervallePrix">
-                        <xsl:variable name="author" select="@auteurs"/>
                         <xsl:sort order="ascending" select="//auteur/nom"/>
-                        <tr>
-                            <td><xsl:value-of select="titre"/></td>
-                            <td><xsl:value-of select="annee"/></td>
-                            <td><xsl:value-of select="prix"/></td>
-                            <td><xsl:value-of select="//auteur[@ident=$author]/nom"/></td>
-                        </tr>
+                        <xsl:if test="contains(titre, $motCle)">
+                            <xsl:variable name="author" select="@auteurs"/>
+                            <xsl:variable name="devise" select="./prix/@devise"/>
+                            <tr>
+                                <td><xsl:value-of select="titre"/></td>
+                                <td><xsl:value-of select="//auteur[@ident=$author]/nom"/></td>
+                                <td><xsl:value-of select="annee"/></td>
+                                <td><xsl:value-of select="prix"/>
+                                    <xsl:value-of select="$whitespace"/>
+                                    <xsl:value-of select="$devise"/>
+                                </td>
+                                <td>
+                                    <img height="100" width="100">
+                                        <xsl:attribute name="src">
+                                            <xsl:value-of select="couverture"/>
+                                        </xsl:attribute>
+                                    </img>
+                                </td>
+                                <td><xsl:value-of select="commentaire"/></td>
+                            </tr>
+                        </xsl:if>
                     </xsl:for-each>
                 </table>
             </body>

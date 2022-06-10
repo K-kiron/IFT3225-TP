@@ -15,26 +15,51 @@
             <titre>THE GREAT GATSBY</titre>
             <annee>2014</annee>
             <prix devise="CAD">32</prix>
+            <commentaire> I thought that the book was all right. 
+                The story was bland for my liking but I did like 
+                the social commentary that the book provided, 
+                dealing with the issues of their time, alcohol, 
+                wealth, and partying. While I do not call this 
+                a fun read, I do recommend it be read so that 
+                the reader can get a taste of life in the 1920s. 
+                The book can be confusing at times and needs to 
+                be read carefully or reread to fully understand.
+            </commentaire>
         </livre>
         <livre langue="FR" auteurs="d">
             <titre>LOLITA</titre>
             <annee>1991</annee>
-            <prix devise="CAD">29</prix>
+            <prix devise="USD">29</prix>
+            <couverture>https://m.media-amazon.com/images/M/MV5BOGNkZDU0YjktN2Q5Zi00MmY0LWI3Y2YtNmQzOGQxY2UzNGM3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg</couverture>
         </livre>
         <livre langue="EN" auteurs="b">
             <titre>BRAVE NEW WORLD</titre>
             <annee>1993</annee>
-            <prix devise="CAD">28</prix>
+            <prix devise="EURO">28</prix>
+            <commentaire>“Actual happiness always looks pretty squalid in 
+                comparison with the overcompensations for misery. And, of 
+                course, stability isn’t nearly so spectacular as instability. 
+                And being contented has none of the glamour of a good fight 
+                against misfortune, none of the picturesqueness of a struggle 
+                with temptation, or a fatal overthrow by passion or doubt. 
+                Happiness is never grand.”
+                
+                The Controller informs us that while we all chase after 
+                happiness and stability, it’s never quite as grand or 
+                glamorous as struggle, suffering and instability.
+            </commentaire>
         </livre>
         <livre langue="EN" auteurs="c">
             <titre>THE SOUND AND THE FURY</titre>
             <annee>1929</annee>
             <prix devise="CAD">33</prix>
+            <couverture>https://m.media-amazon.com/images/M/MV5BMjE3Nzc1NTg5OF5BMl5BanBnXkFtZTgwNDMwMzk4MjE@._V1_.jpg</couverture>
         </livre>
         <livre langue="FR" auteurs="e">
             <titre>CATCH-22</titre>
             <annee>1987</annee>
-            <prix devise="CAD">23</prix>
+            <prix devise="USD">23</prix>
+            <couverture>https://upload.wikimedia.org/wikipedia/en/9/99/Catch22.jpg</couverture>
         </livre>
     </livres>
     
