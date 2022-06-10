@@ -31,7 +31,6 @@ h2{font: 400 18px/22px 'Bree Serif', Georgia, serif;
 .header, .formation, .competence, .experience, .lague, .interet, footer, .validation{
     margin:0px 43px; 
     padding-top:115px;
-    /* float: auto; */
 }
 .header img{
     float:left; margin-right:40px; border:5px solid #222222;
@@ -40,6 +39,5 @@ h2{font: 400 18px/22px 'Bree Serif', Georgia, serif;
 
 hr{
 	margin:0px 43px; 
-    /* float: auto; */
 	border-color: #6a6969;
 }
