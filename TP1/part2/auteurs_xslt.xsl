@@ -32,7 +32,7 @@
                     </tr>
                     
                     <xsl:for-each select="//auteur">
-                        <xsl:sort order="descending" select="//livre/prix"/>
+                        <xsl:sort order="ascending" select="nom"/>
                         <xsl:variable name="id" select="@ident"/>
 <!--                        <xsl:if test="nom=$nomAuteur">-->
                             <tr>
