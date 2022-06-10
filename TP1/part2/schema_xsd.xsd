@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--Wenhao XU_20150702, Yuyang XIONG_20151236-->
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
     <xs:simpleType name="intervalle_prix">  
         <xs:restriction base="xs:integer">  

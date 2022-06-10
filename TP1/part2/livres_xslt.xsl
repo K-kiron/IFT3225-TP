@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--Wenhao XU_20150702, Yuyang XIONG_20151236-->
+
 <?xml-stylesheet type="text/xsl" href="bibliotheque.xml"?>
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
