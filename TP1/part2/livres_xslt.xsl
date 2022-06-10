@@ -10,7 +10,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
         indent="yes" encoding="UTF-8"/>
     
-    <xsl:param name="intervallePrix" select="//livre[33>prix and prix>28]"/>
+    <xsl:param name="intervallePrix" select="//livre[34>prix and prix>22]"/>
+    <xsl:param name="motCle" select="//livre[contains(titre,'GATSBY')]"/>
     
     <xsl:template match="/bibliotheque">
         <html>
@@ -23,13 +24,17 @@
                         <th>Titre</th>
                         <th>Annee</th>
                         <th>Prix</th>
+                        <th>Auteur</th>
                     </tr>
                     
                     <xsl:for-each select="$intervallePrix">
+                        <xsl:variable name="author" select="@auteurs"/>
+                        <xsl:sort order="ascending" select="//auteur/nom"/>
                         <tr>
                             <td><xsl:value-of select="titre"/></td>
                             <td><xsl:value-of select="annee"/></td>
                             <td><xsl:value-of select="prix"/></td>
+                            <td><xsl:value-of select="//auteur[@ident=$author]/nom"/></td>
                         </tr>
                     </xsl:for-each>
                 </table>

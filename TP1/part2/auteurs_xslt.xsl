@@ -10,7 +10,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
         indent="yes" encoding="UTF-8"/>
     
-    <xsl:param name="nomAuteur" select="/bibliotheque/auteurs/auteur[nom='Huxley']"/>
+    <xsl:param name="nomAuteur" select="//auteur[nom='Huxley']"/>
     
     <xsl:template match="/bibliotheque">
         <html>
@@ -28,7 +28,9 @@
                         <th>Livres écrits</th>
                     </tr>
                     
-                    <xsl:for-each select="$nomAuteur">
+                    <xsl:for-each select="//auteur">
+                        <xsl:variable name="id" select="@ident"/>
+                        <xsl:sort order="descending" select="//livre/prix"/>
                         <tr>
                             <td><xsl:value-of select="nom"/></td>
                             <td><xsl:value-of select="prenom"/></td>
@@ -42,7 +44,7 @@
                                 </img>
                             </td>
                             <td>
-                                <xsl:value-of select="/bibliotheque/livres/livre[1]/titre"/>
+                                <xsl:value-of select="//livre[@auteurs=$id]/titre"/>
                             </td>
                         </tr>
                     </xsl:for-each>
