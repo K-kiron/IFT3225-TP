@@ -36,3 +36,8 @@ h2{font: 400 18px/22px 'Bree Serif', Georgia, serif;
     float:left; margin-right:40px; border:5px solid #222222;
     width: 200px;
 }
+
+hr{
+	margin:0px 43px; 
+	border-color: #6a6969;
+}
