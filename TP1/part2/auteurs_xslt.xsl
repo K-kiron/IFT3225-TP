@@ -13,7 +13,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
         indent="yes" encoding="UTF-8"/>
     
-    <xsl:param name="nomAuteur" select="//auteur[nom='Huxley']"/>
+    <xsl:param name="nomAuteur" select="'Huxley'"/>
     
     <xsl:template match="/bibliotheque">
         <html>
@@ -34,22 +34,24 @@
                     <xsl:for-each select="//auteur">
                         <xsl:variable name="id" select="@ident"/>
                         <xsl:sort order="descending" select="//livre/prix"/>
-                        <tr>
-                            <td><xsl:value-of select="nom"/></td>
-                            <td><xsl:value-of select="prenom"/></td>
-                            <td><xsl:value-of select="pays"/></td>
-                            <td><xsl:value-of select="commentaire"/></td>
-                            <td>
-                                <img height="100" width="100">
-                                    <xsl:attribute name="src">
-                                        <xsl:value-of select="photo"/>
-                                    </xsl:attribute>
-                                </img>
-                            </td>
-                            <td>
-                                <xsl:value-of select="//livre[@auteurs=$id]/titre"/>
-                            </td>
-                        </tr>
+<!--                        <xsl:if test="nom=$nomAuteur">-->
+                            <tr>
+                                <td><xsl:value-of select="nom"/></td>
+                                <td><xsl:value-of select="prenom"/></td>
+                                <td><xsl:value-of select="pays"/></td>
+                                <td><xsl:value-of select="commentaire"/></td>
+                                <td>
+                                    <img height="100" width="100">
+                                        <xsl:attribute name="src">
+                                            <xsl:value-of select="photo"/>
+                                        </xsl:attribute>
+                                    </img>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="//livre[@auteurs=$id]/titre"/>
+                                </td>
+                            </tr>
+                        <!--</xsl:if>-->
                     </xsl:for-each>
                 </table>
             </body>

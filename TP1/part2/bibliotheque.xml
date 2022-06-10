@@ -2,8 +2,8 @@
 
 <!--Wenhao XU_20150702, Yuyang XIONG_20151236-->
 
-<?xml-stylesheet type="text/xsl" href="auteurs_xslt.xsl"?>
-<!--<?xml-stylesheet type="text/xsl" href="livres_xslt.xsl"?>-->
+<!--<?xml-stylesheet type="text/xsl" href="auteurs_xslt.xsl"?>-->
+<?xml-stylesheet type="text/xsl" href="livres_xslt.xsl"?>
 <!--<?xml-model href="schema_rnc.rnc" type="application/relax-ng-compact-syntax"?>-->
 <!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
 
@@ -68,7 +68,6 @@
             <nom>Fitzgerald</nom>
             <prenom>F. Scott</prenom>
             <pays>USA</pays>
-            <commentaire/>
             <photo>https://m.media-amazon.com/images/M/MV5BOTM3ZGJiYzgtMmYwMi00NzU1LWJkNmItYWE5ZDhiMjJmN2RhXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_UY1200_CR74,0,630,1200_AL_.jpg</photo>
         </auteur>
         <auteur ident="b">
@@ -105,7 +104,6 @@
             <nom>Nabokov</nom>
             <prenom>Vladimir Vladimirovich</prenom>
             <pays>Russie</pays>
-            <commentaire/>
             <photo>https://images.gr-assets.com/authors/1651442178p8/5152.jpg</photo>
         </auteur>
         <auteur ident="e">
