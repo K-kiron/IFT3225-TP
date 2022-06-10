@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--Wenhao XU_20150702, Yuyang XIONG_20151236-->
+
 <!ELEMENT bibliotheque (livres, auteurs) >
 <!ELEMENT livres (livre+) >
 <!ELEMENT auteurs (auteur+) >

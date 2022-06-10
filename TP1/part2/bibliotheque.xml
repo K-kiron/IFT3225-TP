@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="auteurs_xslt.xsl"?>
-<!--<?xml-stylesheet type="text/xsl" href="livres_xslt.xsl"?>-->
+
+<!--Wenhao XU_20150702, Yuyang XIONG_20151236-->
+
+<!--<?xml-stylesheet type="text/xsl" href="auteurs_xslt.xsl"?>-->
+<?xml-stylesheet type="text/xsl" href="livres_xslt.xsl"?>
 <!--<?xml-model href="schema_rnc.rnc" type="application/relax-ng-compact-syntax"?>-->
 <!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
 
@@ -49,7 +52,7 @@
         <livre langue="EN" auteurs="c">
             <titre>THE SOUND AND THE FURY</titre>
             <annee>1929</annee>
-            <prix devise="CAD">33</prix>
+            <prix devise="CAD">25</prix>
             <couverture>https://m.media-amazon.com/images/M/MV5BMjE3Nzc1NTg5OF5BMl5BanBnXkFtZTgwNDMwMzk4MjE@._V1_.jpg</couverture>
         </livre>
         <livre langue="FR" auteurs="e">
@@ -61,20 +64,6 @@
     </livres>
     
     <auteurs>
-        <auteur ident="a">
-            <nom>Fitzgerald</nom>
-            <prenom>F. Scott</prenom>
-            <pays>USA</pays>
-            <commentaire/>
-            <photo>https://m.media-amazon.com/images/M/MV5BOTM3ZGJiYzgtMmYwMi00NzU1LWJkNmItYWE5ZDhiMjJmN2RhXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_UY1200_CR74,0,630,1200_AL_.jpg</photo>
-        </auteur>
-        <auteur ident="b">
-            <nom>Huxley</nom>
-            <prenom>Aldous</prenom>
-            <pays>UK</pays>
-            <commentaire/>
-            <photo>https://www.biography.com/.image/t_share/MTgyMDgyNTMzMDc5MzkzNjA4/gettyimages-517398572sq.jpg</photo>
-        </auteur>
         <auteur ident="c">
             <nom>Faulkner</nom>
             <prenom>William Cuthbert</prenom>
@@ -87,19 +76,46 @@
             </commentaire>
             <photo>https://images.gr-assets.com/authors/1615562983p8/3535.jpg</photo>
         </auteur>
-        <auteur ident="d">
-            <nom>Nabokov</nom>
-            <prenom>Vladimir Vladimirovich</prenom>
-            <pays>Russie</pays>
-            <commentaire/>
-            <photo>https://images.gr-assets.com/authors/1651442178p8/5152.jpg</photo>
+        <auteur ident="a">
+            <nom>Fitzgerald</nom>
+            <prenom>F. Scott</prenom>
+            <pays>USA</pays>
+            <photo>https://m.media-amazon.com/images/M/MV5BOTM3ZGJiYzgtMmYwMi00NzU1LWJkNmItYWE5ZDhiMjJmN2RhXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_UY1200_CR74,0,630,1200_AL_.jpg</photo>
         </auteur>
         <auteur ident="e">
             <nom>Heller</nom>
             <prenom>Joseph</prenom>
             <pays>USA</pays>
-            <commentaire/>
+            <commentaire>né à Brooklyn le 1er mai 1923 et mort à East Hampton 
+                le 12 décembre 1999, est un auteur américain mondialement connu 
+                pour ses écrits satiriques concernant la Seconde Guerre mondiale, 
+                notamment Catch 22.
+            </commentaire>
             <photo>http://wordpress.wbur.org/wp-content/uploads/2013/07/0722_joseph-heller.jpg</photo>
+        </auteur>
+        <auteur ident="b">
+            <nom>Huxley</nom>
+            <prenom>Aldous</prenom>
+            <pays>UK</pays>
+            <commentaire>Un écrivain, romancier et philosophe britannique, 
+                membre de la famille Huxley. Il est diplômé du Balliol 
+                College de l'université d'Oxford avec une mention très 
+                bien en littérature anglaise.
+                
+                Auteur de près de cinquante ouvrages, il est surtout connu 
+                pour ses romans, dont Le Meilleur des mondes, roman 
+                d’anticipation dystopique, pour des ouvrages non romanesques, 
+                comme Les Portes de la perception, qui retrace les expériences 
+                vécues lors de la prise de drogue psychédélique, et pour un 
+                large éventail d'essais.
+            </commentaire>
+            <photo>https://www.biography.com/.image/t_share/MTgyMDgyNTMzMDc5MzkzNjA4/gettyimages-517398572sq.jpg</photo>
+        </auteur>
+        <auteur ident="d">
+            <nom>Nabokov</nom>
+            <prenom>Vladimir Vladimirovich</prenom>
+            <pays>Russie</pays>
+            <photo>https://images.gr-assets.com/authors/1651442178p8/5152.jpg</photo>
         </auteur>
     </auteurs>
 </bibliotheque>
