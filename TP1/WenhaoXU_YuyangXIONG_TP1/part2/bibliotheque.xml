@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Wenhao XU_20150702, Yuyang XIONG_20151236-->
+
+<!--<?xml-stylesheet type="text/xsl" href="auteurs_xslt.xsl"?>-->
+<?xml-stylesheet type="text/xsl" href="livres_xslt.xsl"?>
+<!--<?xml-model href="schema_rnc.rnc" type="application/relax-ng-compact-syntax"?>-->
+<!DOCTYPE bibliotheque SYSTEM "schema_dtd.dtd">
+
+<!--document XML bibliotheque-->
+<bibliotheque xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="schema_xsd.xsd">
+    <livres>
+        <livre langue="EN" auteurs="a">
+            <titre>THE GREAT GATSBY</titre>
+            <annee>2014</annee>
+            <prix devise="CAD">32</prix>
+            <commentaire> I thought that the book was all right. 
+                The story was bland for my liking but I did like 
+                the social commentary that the book provided, 
+                dealing with the issues of their time, alcohol, 
+                wealth, and partying. While I do not call this 
+                a fun read, I do recommend it be read so that 
+                the reader can get a taste of life in the 1920s. 
+                The book can be confusing at times and needs to 
+                be read carefully or reread to fully understand.
+            </commentaire>
+        </livre>
+        <livre langue="FR" auteurs="d">
+            <titre>LOLITA</titre>
+            <annee>1991</annee>
+            <prix devise="USD">29</prix>
+            <couverture>https://m.media-amazon.com/images/M/MV5BOGNkZDU0YjktN2Q5Zi00MmY0LWI3Y2YtNmQzOGQxY2UzNGM3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg</couverture>
+        </livre>
+        <livre langue="EN" auteurs="b">
+            <titre>BRAVE NEW WORLD</titre>
+            <annee>1993</annee>
+            <prix devise="EURO">28</prix>
+            <commentaire>“Actual happiness always looks pretty squalid in 
+                comparison with the overcompensations for misery. And, of 
+                course, stability isn’t nearly so spectacular as instability. 
+                And being contented has none of the glamour of a good fight 
+                against misfortune, none of the picturesqueness of a struggle 
+                with temptation, or a fatal overthrow by passion or doubt. 
+                Happiness is never grand.”
+                
+                The Controller informs us that while we all chase after 
+                happiness and stability, it’s never quite as grand or 
+                glamorous as struggle, suffering and instability.
+            </commentaire>
+        </livre>
+        <livre langue="EN" auteurs="c">
+            <titre>THE SOUND AND THE FURY</titre>
+            <annee>1929</annee>
+            <prix devise="CAD">25</prix>
+            <couverture>https://m.media-amazon.com/images/M/MV5BMjE3Nzc1NTg5OF5BMl5BanBnXkFtZTgwNDMwMzk4MjE@._V1_.jpg</couverture>
+        </livre>
+        <livre langue="FR" auteurs="e">
+            <titre>CATCH-22</titre>
+            <annee>1987</annee>
+            <prix devise="USD">23</prix>
+            <couverture>https://upload.wikimedia.org/wikipedia/en/9/99/Catch22.jpg</couverture>
+        </livre>
+    </livres>
+    
+    <auteurs>
+        <auteur ident="c">
+            <nom>Faulkner</nom>
+            <prenom>William Cuthbert</prenom>
+            <pays>USA</pays>
+            <commentaire>
+                Un romancier et nouvelliste américain. 
+                Publié à partir des années 1920, 
+                il reçoit le prix Nobel de littérature en 1949, 
+                alors qu'il est encore relativement peu connu.
+            </commentaire>
+            <photo>https://images.gr-assets.com/authors/1615562983p8/3535.jpg</photo>
+        </auteur>
+        <auteur ident="a">
+            <nom>Fitzgerald</nom>
+            <prenom>F. Scott</prenom>
+            <pays>USA</pays>
+            <photo>https://m.media-amazon.com/images/M/MV5BOTM3ZGJiYzgtMmYwMi00NzU1LWJkNmItYWE5ZDhiMjJmN2RhXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_UY1200_CR74,0,630,1200_AL_.jpg</photo>
+        </auteur>
+        <auteur ident="e">
+            <nom>Heller</nom>
+            <prenom>Joseph</prenom>
+            <pays>USA</pays>
+            <commentaire>né à Brooklyn le 1er mai 1923 et mort à East Hampton 
+                le 12 décembre 1999, est un auteur américain mondialement connu 
+                pour ses écrits satiriques concernant la Seconde Guerre mondiale, 
+                notamment Catch 22.
+            </commentaire>
+            <photo>http://wordpress.wbur.org/wp-content/uploads/2013/07/0722_joseph-heller.jpg</photo>
+        </auteur>
+        <auteur ident="b">
+            <nom>Huxley</nom>
+            <prenom>Aldous</prenom>
+            <pays>UK</pays>
+            <commentaire>Un écrivain, romancier et philosophe britannique, 
+                membre de la famille Huxley. Il est diplômé du Balliol 
+                College de l'université d'Oxford avec une mention très 
+                bien en littérature anglaise.
+                
+                Auteur de près de cinquante ouvrages, il est surtout connu 
+                pour ses romans, dont Le Meilleur des mondes, roman 
+                d’anticipation dystopique, pour des ouvrages non romanesques, 
+                comme Les Portes de la perception, qui retrace les expériences 
+                vécues lors de la prise de drogue psychédélique, et pour un 
+                large éventail d'essais.
+            </commentaire>
+            <photo>https://www.biography.com/.image/t_share/MTgyMDgyNTMzMDc5MzkzNjA4/gettyimages-517398572sq.jpg</photo>
+        </auteur>
+        <auteur ident="d">
+            <nom>Nabokov</nom>
+            <prenom>Vladimir Vladimirovich</prenom>
+            <pays>Russie</pays>
+            <photo>https://images.gr-assets.com/authors/1651442178p8/5152.jpg</photo>
+        </auteur>
+    </auteurs>
+</bibliotheque>
