@@ -12,7 +12,6 @@ hr {
 #board {
     width: 400px;
     height: 400px;
-
     background-color: #cdc1b5;
     border: 6px solid #bbada0;
     margin: 0 auto;
@@ -24,9 +23,67 @@ hr {
     width: 90px;
     height: 90px;
     border: 5px solid #bbada0;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 200%;
+    font-weight: bold;
 }
+
+.inner{
+    margin: 0;
+    border-radius: 5px;
+}
+
+.tile.t2 {
+    background-color: #eee4da;
+}
+
+.tile.t4 {
+    background-color: #eee1c9;
+}
+
+.tile.t8 {
+    background-color: #f3b27a;
+}
+
+.tile.t16 {
+    color: white;
+    background-color: #f69664;
+}
+
+.tile.t32 {
+    color: white;
+    background-color: #f77c5f;
+}
+
+.tile.t64 {
+    color: white;
+    background-color: #f75f3b;
+}
+
+.tile.t128 {
+    color: white;
+    background-color: #edd073;
+}
+
+.tile.t256 {
+    color: white;
+    background-color: #edcf62;
+}
+
+.tile.t512 {
+    color: white;
+    background-color: #edcc62;
+}
+
+.tile.t1024 {
+    color: white;
+    background-color: #edc850;
+}
+
+.tile.t2048 {
+    color: white;
+    background-color: #edc53f;
+}
+
