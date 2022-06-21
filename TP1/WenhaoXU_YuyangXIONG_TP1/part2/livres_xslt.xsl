@@ -34,7 +34,7 @@
                     </tr>
                     
                     <xsl:for-each select="$intervallePrix">
-                        <xsl:sort order="ascending" select="//auteur/nom"/>
+                        <xsl:sort order="ascending" select="prix"/>
                         <xsl:if test="contains(titre, $motCle)">
                             <xsl:variable name="author" select="@auteurs"/>
                             <xsl:variable name="devise" select="./prix/@devise"/>
