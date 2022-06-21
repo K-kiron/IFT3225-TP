@@ -35,6 +35,7 @@ body {
     padding: 0.5em 1em;
     text-decoration: none;
     color: #f9f6f2;
+    font:  bold 1.2em "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 #board {
