@@ -3,10 +3,38 @@ body {
     background-color: #faf8ef;
     color: #776e65;
     font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 50px;
 }
 
-hr {
+.head-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+#title {
     width: 50%;
+    display: block;
+    float: left;
+    font: bold 2.5em "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.button-container {
+    width: 50%;
+    display: block;
+    float: right;
+}
+
+.restart {
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #f9f6f2;
 }
 
 #board {
