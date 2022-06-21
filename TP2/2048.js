@@ -1,19 +1,22 @@
 var row = 4;
 var column = 4;
 var score = 0;
-var board = [[0, 0, 0, 0],
-             [0, 0, 0, 0],
-             [0, 0, 0, 0],
-             [0, 0, 0, 0]];
+var board = [[0, 2048, 0, 0],
+             [0, 32, 0, 0],
+             [0, 0, 64, 0],
+             [0, 0, 0, 128]];
         
 for (var i = 0; i < row; i++) {
     for (var j = 0; j < column; j++) {
         var num = board[i][j];
         var tile = document.createElement("div");
+
         tile.classList.add("tile");
+        tile.classList.add("t" + num);
         tile.setAttribute('id', i.toString() + "-" + j.toString());
-        tile.id = i.toString() + "-" + j.toString();
+        tile.id = i.toString() + "-" + j.toString();        
         tile.innerText = num;
+
         document.getElementById("board").appendChild(tile);
     }
 }
