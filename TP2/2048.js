@@ -1,10 +1,35 @@
-var rowNum = 4;
-var columnNum = 4;
-var score = 0;
-var board = [[0, 2048, 0, 0],
-             [0, 32, 0, 0],
-             [0, 0, 64, 0],
-             [0, 0, 0, 128]];
+function initBoard() {
+    let n = prompt("How many rows and columns do you want?", "4");
+    if (n == null) {
+        n = 4;
+    }
+    while (n < 2 || n > 20) {
+        alert("Please enter a number between 2 and 20");
+        n = prompt("How many rows and columns do you want?", "4");
+    }
+    rowNum = n;
+    columnNum = n;
+    board = new Array(rowNum);
+    for (var i = 0; i < rowNum; i++) {
+        board[i] = new Array(columnNum);
+    }
+    for (var i = 0; i < rowNum; i++) {
+        for (var j = 0; j < columnNum; j++) {
+            board[i][j] = 0;
+        }
+    }
+    score = 0;
+
+}
+
+
+// var rowNum = 4;
+// var columnNum = 4;
+// var score = 0;
+// var board = [[0, 0, 0, 0],
+//              [0, 0, 0, 0],
+//              [0, 0, 0, 0],
+//              [0, 0, 0, 0]];
         
 function updateTile(num, tile) {
     tile.classList.value = "";
@@ -15,38 +40,6 @@ function updateTile(num, tile) {
         tile.innerText = num;
     }
 } 
-
-// initializing game
-for (var i = 0; i < rowNum; i++) {
-    for (var j = 0; j < columnNum; j++) {
-        var num = board[i][j];
-        var tile = document.createElement("div");
-        tile.setAttribute('id', i.toString() + "-" + j.toString());
-
-        updateTile(num, tile);
-
-        document.getElementById("board").appendChild(tile);
-    }
-}
-
-createTile();
-createTile();
-
-document.addEventListener("keyup", (event) => {
-    if (event.code == "ArrowLeft") {
-        slideLeft();
-        createTile();
-    } else if (event.code == "ArrowRight") {
-        slideRight();
-        createTile();
-    } else if (event.code == "ArrowUp") {
-        slideUp();
-        createTile();
-    } else if (event.code == "ArrowDown") {
-        slideDown();
-        createTile();
-    } 
-})
 
 function removeZeros(row) {
     return row.filter(element => element != 0);
@@ -224,3 +217,74 @@ function createTile() {
     }
 
 }
+
+function ajustWindowSize() {
+    if (rowNum>6){
+        
+        var percentage = 6/rowNum;
+
+        document.getElementById("board").style.width = 600 + "px";
+        document.getElementById("board").style.height = 600 + "px";
+    
+        var tileSize = percentage * 90 + "px";
+        var tileBorder = percentage * 5 + "px solid #bbada0";
+        var tileFont = percentage * 200 + "%";
+
+        for (var m = 0; m < rowNum; m++) {
+            for (var n = 0; n < columnNum; n++) {
+                var tile = document.getElementById(m + "-" + n);
+                tile.style.width = tileSize;
+                tile.style.height = tileSize;
+                tile.style.border = tileBorder;
+                tile.style.fontSize = tileFont;
+            }
+        }
+    }
+}
+
+
+// initializing game
+initBoard();
+
+document.getElementById("board").style.width = columnNum * 100 + "px";
+document.getElementById("board").style.height = rowNum * 100 + "px";
+
+
+for (var i = 0; i < rowNum; i++) {
+    for (var j = 0; j < columnNum; j++) {
+        var num = board[i][j];
+        var tile = document.createElement("div");
+        tile.setAttribute('id', i.toString() + "-" + j.toString());
+
+        updateTile(num, tile);
+
+        
+
+        document.getElementById("board").appendChild(tile);
+    }
+}
+
+ajustWindowSize();
+
+createTile();
+createTile();
+
+document.addEventListener("keyup", (event) => {
+    if (event.code == "ArrowLeft") {
+        slideLeft();
+        createTile();
+        // ajustWindowSize();
+    } else if (event.code == "ArrowRight") {
+        slideRight();
+        createTile();
+        // ajustWindowSize();
+    } else if (event.code == "ArrowUp") {
+        slideUp();
+        createTile();
+        // ajustWindowSize();
+    } else if (event.code == "ArrowDown") {
+        slideDown();
+        createTile();
+        // ajustWindowSize();
+    } 
+})
