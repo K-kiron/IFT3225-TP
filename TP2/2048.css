@@ -64,54 +64,54 @@ body {
     border-radius: 5px;
 }
 
-.tile.t2 {
+.t2 {
     background-color: #eee4da;
 }
 
-.tile.t4 {
+.t4 {
     background-color: #eee1c9;
 }
 
-.tile.t8 {
+.t8 {
     background-color: #f3b27a;
 }
 
-.tile.t16 {
+.t16 {
     color: white;
     background-color: #f69664;
 }
 
-.tile.t32 {
+.t32 {
     color: white;
     background-color: #f77c5f;
 }
 
-.tile.t64 {
+.t64 {
     color: white;
     background-color: #f75f3b;
 }
 
-.tile.t128 {
+.t128 {
     color: white;
     background-color: #edd073;
 }
 
-.tile.t256 {
+.t256 {
     color: white;
     background-color: #edcf62;
 }
 
-.tile.t512 {
+.t512 {
     color: white;
     background-color: #edcc62;
 }
 
-.tile.t1024 {
+.t1024 {
     color: white;
     background-color: #edc850;
 }
 
-.tile.t2048 {
+.t2048 {
     color: white;
     background-color: #edc53f;
 }
