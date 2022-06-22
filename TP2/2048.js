@@ -113,7 +113,12 @@ function slideRight() {
 
 function slideUp() {
     for (var i = 0; i < columnNum; i++) {
-        var row = [board[0][i], board[1][i], board[2][i], board[3][i]];
+        var row = new Array();
+        for (var j = 0; j < rowNum; j++) {
+            row.push(board[j][i]);
+        }
+
+        // debugger;
 
         row = removeZeros(row);
         
@@ -148,7 +153,12 @@ function slideUp() {
 
 function slideDown() {
     for (var i = 0; i < columnNum; i++) {
-        var row = [board[3][i], board[2][i], board[1][i], board[0][i]];
+        var row = new Array();
+        for (var j = rowNum-1; j >= 0; j--) {
+            row.push(board[j][i]);
+        }
+
+        // debugger;
 
         row = removeZeros(row);
         
@@ -270,21 +280,22 @@ createTile();
 createTile();
 
 document.addEventListener("keyup", (event) => {
-    if (event.code == "ArrowLeft") {
-        slideLeft();
-        createTile();
-        // ajustWindowSize();
-    } else if (event.code == "ArrowRight") {
-        slideRight();
-        createTile();
-        // ajustWindowSize();
-    } else if (event.code == "ArrowUp") {
-        slideUp();
-        createTile();
-        // ajustWindowSize();
-    } else if (event.code == "ArrowDown") {
-        slideDown();
-        createTile();
-        // ajustWindowSize();
-    } 
+    switch (event.code) {
+        case "ArrowUp":
+            slideUp();
+            createTile();
+            break;
+        case "ArrowDown":
+            slideDown();
+            createTile();
+            break;
+        case "ArrowLeft":
+            slideLeft();
+            createTile();
+            break;
+        case "ArrowRight":
+            slideRight();
+            createTile();
+            break;
+    }
 })
