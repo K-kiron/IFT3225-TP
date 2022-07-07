@@ -279,7 +279,11 @@ function gameOver() {
     }
 
     if (!goOn) {
+        // updateHTML();
         alert("You've failed. Click on 'New Game' to try again!");
+        // alert("You've failed. Click on 'OK' to try again!",'',function(){
+        //     location.reload(true);
+        // })
     }
 }
 

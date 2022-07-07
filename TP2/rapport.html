@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC ”-//W3C//DTD XHTML 1.0 Strict//EN” ”http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+    <head>
+        <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
+        <title>Rapport du TP2</title>
+    </head>
+    <body>
+
+        <div class="titre">
+            <h1>Rapport du TP2</h1>
+        </div>
+
+        <div class="sous-titre">
+            <h2>Description du TP2</h2>
+        </div>
+
+        <div class="auteurs">
+            <strong>WenhaoXU_YuyangXIONG</strong>
+        </div>
+
+        <div class="brief">
+            <p>
+                Nous avons commencé par écrire manuellement un tableau 4*4 en html. Puis nous avons modifié 
+                le CSS pour l'ajuster au style approprié (display:flex ; flex-wrap:wrap). Nous avons ensuite 
+                ajouté différentes tuiles au tableau (2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048) et fait 
+                correspondre les couleurs des différentes valeurs des tuiles de sorte que chaque fois que la 
+                valeur d'une tuile change, sa couleur change aussi automatiquement. Afin de reproduire le jeu 
+                le plus fidèlement possible, nous avons utilisé les mêmes couleurs pour les tuiles que dans la 
+                version originale.
+
+                Après avoir confirmé que les styles correspondaient, nous avons procédé à l'écriture ultérieure 
+                du javascript. Tout d'abord, nous avons supprimé tout le contenu du tableau dans le fichier html, 
+                puis nous avons ajouté automatiquement un tableau au html via le code js (pour des raisons de 
+                simplicité et de test, nous avons d'abord entré un tableau 4*4). Après avoir ajouté la table, 
+                nous ajoutons les tuiles à la table une par une (ici nous utilisons une boucle for). Après un 
+                test réussi, nous avons commencé à écrire des fonctions pour générer les tuiles, des fonctions 
+                pour les actions du clavier correspondant aux touches haut, bas, gauche et droite, et des fonctions 
+                pour que deux tuiles identiques entrent en collision l'une avec l'autre pour en générer une nouvelle. 
+                Après de nombreux tests et modifications, notre carte 4*4 a finalement été mise en œuvre avec succès. 
+                Nous avons ensuite commencé à écrire des fonctions pour rendre le tableau plus variable (n*n). Pour 
+                ce faire, nous devions faire en sorte que la taille du tableau augmente lorsque n augmente, alors 
+                que la taille de la tuile reste la même. Cependant, au cours du processus de débogage, nous avons 
+                constaté que si la valeur n était élevée, le tableau était obscurci et ne s'affichait pas complètement, 
+                ce qui affectait l'expérience de jeu. Nous avons donc écrit une fonction pour redimensionner dynamiquement 
+                la fenêtre afin que la limite supérieure du tableau soit fixée à 600px*600px.
+            </p>
+        </div>
+
+        <div class="appris">
+            <p>
+                Au cours de l'écriture du code, nous avons acquis une meilleure compréhension de Javascript, 
+                comme le fait que les variables utilisées directement sans déclaration deviennent par défaut 
+                des variables globales qui peuvent être appelées à partir d'autres scopes du fichier. Cela ne 
+                fonctionne pas dans les autres langages de programmation (les variables non déclarées ne peuvent 
+                pas être utilisées).
+            </p>
+        </div>
+
+        <div class="liens"></div>
+
+        <div class="publique"></div>
+        
+    </body>
+</html>
