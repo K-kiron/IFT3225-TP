@@ -40,11 +40,16 @@ function updateHTML() {
     //update html
     for (var m = 0; m < rowNum; m++) {
         for (var n = 0; n < columnNum; n++) {
-            var oldTile = document.getElementById(m + "-" + n);
+            // document.getElementById(m + "-" + n)
+            var oldTile = $("#" + m + "-" + n);
+            var oldTile = oldTile[0];
             updateTile(board[m][n], oldTile);
         }
     }
-    document.getElementById("score").innerHTML = score;
+    // document.getElementById("score")
+    var oldScore = $("#score");
+    var oldScore = oldScore[0];
+    oldScore.innerHTML = score;
 }
 
 function slideLeft() {
@@ -314,7 +319,9 @@ function createTile() {
             }
             board[row][column] = tileNum;
 
-            var tile = document.getElementById(row + "-" + column);
+            // document.getElementById(row + "-" + column)
+            var tile = $("#" + row + "-" + column);
+            var tile = tile[0];
             tile.classList.add("t" + tileNum);
             tile.innerText = tileNum;
 
@@ -329,8 +336,11 @@ function adjustWindowSize() {
         
         var percentage = 6/rowNum;
 
-        document.getElementById("board").style.width = 600 + "px";
-        document.getElementById("board").style.height = 600 + "px";
+        var board = $("#board");
+        board.css("width", 600 + "px");
+        board.css("height", 600 + "px");
+        // document.getElementById("board").style.width = 600 + "px";
+        // document.getElementById("board").style.height = 600 + "px";
     
         var tileSize = percentage * 90 + "px";
         var tileBorder = percentage * 5 + "px solid #bbada0";
@@ -338,11 +348,16 @@ function adjustWindowSize() {
 
         for (var m = 0; m < rowNum; m++) {
             for (var n = 0; n < columnNum; n++) {
-                var tile = document.getElementById(m + "-" + n);
-                tile.style.width = tileSize;
-                tile.style.height = tileSize;
-                tile.style.border = tileBorder;
-                tile.style.fontSize = tileFont;
+                var tile = $("#" + m + "-" + n);
+                // var tile = document.getElementById(m + "-" + n);
+                tile.css("width", tileSize);
+                tile.css("height", tileSize);
+                tile.css("border", tileBorder);
+                tile.css("font-size", tileFont);
+                // tile.style.width = tileSize;
+                // tile.style.height = tileSize;
+                // tile.style.border = tileBorder;
+                // tile.style.fontSize = tileFont;
             }
         }
     }
