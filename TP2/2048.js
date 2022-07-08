@@ -367,8 +367,11 @@ function adjustWindowSize() {
 // initializing game
 initBoard();
 
-document.getElementById("board").style.width = columnNum * 100 + "px";
-document.getElementById("board").style.height = rowNum * 100 + "px";
+var board1 = $("#board");
+var board1 = board1[0];
+// document.getElementById("board")
+board1.style.width = columnNum * 100 + "px";
+board1.style.height = rowNum * 100 + "px";
 
 
 for (var i = 0; i < rowNum; i++) {
@@ -379,7 +382,7 @@ for (var i = 0; i < rowNum; i++) {
 
         updateTile(num, tile);
 
-        document.getElementById("board").appendChild(tile);
+        board1.appendChild(tile);
     }
 }
 
