@@ -17,4 +17,4 @@
     <input type="submit" name="login" value="Login" form="form1"> 
     <input type="submit" name="createAccount" value="New Account" form="form1">
 </body>
-</html>
+</html> 

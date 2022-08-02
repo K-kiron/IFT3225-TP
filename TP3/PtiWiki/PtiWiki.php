@@ -6,7 +6,7 @@
 *  Les pages sont conservées dans un répertoire ouvert en écriture pour tous...
 *  Il serait préférable  d'utiliser une BD avec une meilleure gestion des usagers.
 */
-// require_once 'database.php';
+require_once 'database.php';
 require_once 'Wiki.php';
 require_once 'Templates.php';
 
@@ -24,11 +24,12 @@ if($method=='POST'){
 
 
 $wiki = new Wiki("Wk");          // création de l'object Wiki
-$title = "PtiWiki - $file";    // $file = PageAccueil
+$title = "PtiWiki - $file";      
 $page = $wiki->getPage("$file.text");
 if($page->exists())$page->load();
-$navlinks = viewLinkTPL("PageAccueil","Accueil")." ".editLinkTPL($file,"Éditer");
+$navlinks = viewLinkTPL("PageAccueil","Accueil", $conn)." ".editLinkTPL($file,"Éditer");
 if($file!="PageAccueil") $navlinks = $navlinks." ".deleteLinkTPL($file,"Détruire");
+$navlinks = $navlinks." ".logout();
 
 switch ($op) {
     case 'create':
@@ -62,6 +63,7 @@ switch ($op) {
 		// else
 		// 	$newText = $_POST['data'];
         $newText = stripslashes($_POST['data']);
+        // echo $newText;
         $page->setText($newText)->save();
         echo mainTPL($title,viewTPL(bannerTPL($title),
                                     markDown2HTML($newText)),

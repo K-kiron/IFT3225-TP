@@ -1,5 +1,4 @@
 <?php
-
 // création de tags HTML
 function tag($tag,$body,$attrs=""){
 	$out = "<$tag";
@@ -44,7 +43,8 @@ function markDown2HTML($texte){
 
 // call back utilisé pour la génération des liens vers les pages Wiki indentifiées par les WikiWords
 function viewLinkCallback($matches){
-    return viewLinkTPL($matches[1],$matches[1]);
+    global $conn;
+    return viewLinkTPL($matches[1],$matches[1],$conn);
 }
 
 // fonction pour tester isolément la transformation markDown2HTML
