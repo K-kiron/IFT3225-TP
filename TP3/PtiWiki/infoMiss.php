@@ -3,11 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Bienvenue au PtiWiki</title>
+    <title>Username or Password Miss</title>
 </head>
 <body>
-	<h1>Bienvenue au PtiWiki</h1>
-	<p>Un prototype de Wiki très simple en PHP</p>
-	<p><a href="http://localhost:8080/PtiWiki/PtiWiki.php?op=read&amp;file=PageAccueil">Débuter</a></p>
+    <h2 style='color:red;'>Please enter username or password.</h2>
+	<form action="server.php" method="POST" id="form4">
+        <input type="submit" name="return_to_login_page" value="Return">
+    </form>
+    
 </body>
 </html>

@@ -15,7 +15,7 @@ function mainTPL($title,$body,$navlinks){
     </head>
     <body>
         $body
-        <hr></hr>
+        <hr>
         $navlinks
     </body>
 </html>
@@ -50,9 +50,14 @@ function bannerTPL($banner){
     return "<p style='color:green'>$banner</p><hr></hr>";
 }
 
-function viewLinkTPL($file,$name){
+function viewLinkTPL($file,$name,$conn){
     global $wiki;
-    if(file_exists("{$wiki->getBase()}/$file.text")){
+    
+    $request = "SELECT content FROM Texts WHERE title = '$file.text'";
+    $result = mysqli_query($conn, $request);
+    $nb_rows = mysqli_num_rows($result);
+    // if(file_exists("{$wiki->getBase()}/$file.text")){
+    if ($nb_rows > 0) {
         $op="read";
         $style="";
     } else { // new file, make the link in red and set op to create
@@ -79,6 +84,10 @@ function deleteTPL($pageURL){
         <input type="submit" value="Détruire $pageURL!"></input>
     </form>    
 DELETE;
+}
+
+function logout(){
+    return "<a href='login.php'>Logout</a>";
 }
 
 ?>
