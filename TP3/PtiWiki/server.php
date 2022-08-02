@@ -7,7 +7,7 @@
             $username = $_POST["username"];
             $password = $_POST["password"];
 
-            $request = "SELECT password, identity, username FROM Users WHERE username = '${username}'";
+            $request = "SELECT password, identity, username FROM Users WHERE username = '${username}' AND password = '${password}'";
             $result = mysqli_query($conn, $request);
             $nb_rows = mysqli_num_rows($result);
             $tuple = mysqli_fetch_assoc($result);
@@ -47,7 +47,14 @@
         $request = "DELETE FROM Users WHERE username = '$username'";
         $result = mysqli_query($conn, $request);
 
-        header("Location: adminPage.php");
+        if ($result) {
+            echo "Delete with success";
+            header("Location: adminPage.php");
+        } else {
+            echo "Delete failed. User not found";
+            header("Location: adminPage.php");
+        }
+
     }
 
     if (isset($_POST["return_to_login_page"])) {

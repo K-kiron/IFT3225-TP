@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Rapport du TP3</title>
+    </head>
+    <body>
+
+        <div class="titre">
+            <h1>Rapport du TP3</h1>
+        </div>
+
+        <hr/>
+
+        <div class="auteurs">
+            <h2>Auteurs</h2>
+            <strong>WenhaoXU_YuyangXIONG</strong>
+            <br/>
+            <strong>20150702_20151236</strong>
+        </div>
+
+        <hr/>
+
+        <div class="brief">
+            <h2>Réalisation du wiki</h2>
+            <p>
+                Après avoir lu le code source de PtiWiki, nous avons commencé l'implémentation du wiki par la mise 
+                en place du système de gestion des comptes. Comme l'exige l'énonce, les comptes sont divisés en comptes 
+                d'administrateur et comptes d'utilisateur. Les comptes d'administrateur peuvent effectuer des opérations 
+                de suppression sur les comptes d'utilisateur, tandis que les comptes d'utilisateur seront directement 
+                liés à l'interface wiki. En fonction des fonctions exercées, nous avons divisé les dossiers en plusieurs :
+                <br/><br/>
+                login.php - l'écran de connexion principal, principalement utilisé pour collecter des informations <br/>
+                adminPage.php - l'écran d'administration, utilisé pour afficher les informations relatives au compte de l'utilisateur et pour effectuer des actions de suppression. <br/>
+                createAccount.php - l'écran de création de compte, qui crée de nouveaux comptes d'utilisateur <br/>
+                server.php - le fichier de traitement dorsal du serveur, qui est responsable de l'exécution d'opérations et de fonctions spécifiques au wiki. <br/>
+                database.php - la connexion à la base de données du wiki <br/>
+                <br/>
+                Dans l'implémentation, nous avons ajouté plusieurs écrans pour afficher les messages d'erreur <br/>
+                Ensuite, nous avons créé un fichier text.sql pour importer le fichier texte dans notre base de données.
+            </p>
+        </div>
+
+        <div class="appris">
+            <h2>Ce que nous avons appris pendant réaliser ce TP</h2>
+            <p>
+                Une implémentation concrète d'une connexion php à une base de données sql.
+                <br/><br/>
+                Sauts multiples de l'interface php, implémentation de l'affichage des messages d'erreur.
+                <br/><br/>
+                Méthode d'importation de fichiers texte dans une base de données sql.
+                <br/><br/>
+            </p>
+        </div>
+        
+    </body>
+</html>
