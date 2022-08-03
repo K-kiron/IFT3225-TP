@@ -44,14 +44,27 @@
 
     if (isset($_POST["remove"])) {
         $username = $_POST["username"];
+        $request = "SELECT username FROM Users WHERE username = '${username}'";
+        $result = mysqli_query($conn, $request);
+        $nb_rows = mysqli_num_rows($result);
+
         $request = "DELETE FROM Users WHERE username = '$username'";
         $result = mysqli_query($conn, $request);
 
-        header("Location: adminPage.php");
+        if ($nb_rows > 0) {
+            header("Location: deleteSucceed.php");
+        } else {
+            header("Location: deleteFail.php");
+        }
+
     }
 
     if (isset($_POST["return_to_login_page"])) {
         header("Location: login.php");
+    }
+
+    if (isset($_GET["return_to_admin_page"])) {
+        header("Location: adminPage.php");
     }
 
 ?>
