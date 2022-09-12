@@ -1,5 +1,8 @@
-http://www-ens.iro.umontreal.ca/~xiongyuy/login.php
+https://www-ens.iro.umontreal.ca/~xiongyuy/index.html
+
 
 admin account:
 Username: admin
 Password: admin
+
+Users' accounts sont dans le page d'admin.
